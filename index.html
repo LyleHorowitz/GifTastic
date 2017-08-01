@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  	<meta charset="utf-8">
+  	<title>The GifTastic World Of Wrestling</title>
+</head>
+
+<body>
+
+		<button id="therock-button">The Rock</button>
+		<button id="kane-button">Kane</button>
+		<button id="undertaker-button">The Undertaker</button>
+		<button id="kurtangle-button">Kurt Angle</button>
+		<button id="johncena-button">John Cena</button>
+		<button id="machoman-button">Macho Man Randy Savage</button>
+		<button id="chrisjericho-button">Chris Jericho</button>
+		<button id="mickfoley-button">Mick Foley</button>
+
+
+<div id="images">
+</div>
+<br>
+<br>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$("#therock-button").on("click", function() {
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=the+rock+wwe";
+	$.ajax({
+	url: queryURL,
+	method: "GET"
+	})
+	.done(function(response) {
+	var imageUrl = response.data.image_original_url;
+	var therockImage = $("<img>");
+	therockImage.attr("src", imageUrl);
+	therockImage.attr("alt", "the rock image");
+	$("#images").prepend(therockImage);
+	});
+	});
+
+$("#kane-button").on("click", function() {
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kane+wwe";
+	$.ajax({
+	url: queryURL,
+	method: "GET"
+	})
+	.done(function(response) {
+	var imageUrl = response.data.image_original_url;
+	var kaneImage = $("<img>");
+	kaneImage.attr("src", imageUrl);
+	kaneImage.attr("alt", "kane image");
+	$("#images").prepend(kaneImage);
+	});
+	});
+
+$("#undertaker-button").on("click", function() {
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=the+undertaker";
+	$.ajax({
+	url: queryURL,
+	method: "GET"
+	})
+	.done(function(response) {
+	var imageUrl = response.data.image_original_url;
+	var undertakerImage = $("<img>");
+	undertakerImage.attr("src", imageUrl);
+	undertakerImage.attr("alt", "undertaker image");
+	$("#images").prepend(undertakerImage);
+	});
+	});
+
+
+$("#kurtangle-button").on("click", function() {
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kurt+angle";
+	$.ajax({
+	url: queryURL,
+	method: "GET"
+	})
+	.done(function(response) {
+	var imageUrl = response.data.image_original_url;
+	var kurtangleImage = $("<img>");
+	kurtangleImage.attr("src", imageUrl);
+	kurtangleImage.attr("alt", "kurt angle image");
+	$("#images").prepend(kurtangleImage);
+	});
+	});
+
+$("#johncena-button").on("click", function() {
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=john+cena+wwe";
+	$.ajax({
+	url: queryURL,
+	method: "GET"
+	})
+	.done(function(response) {
+	var imageUrl = response.data.image_original_url;
+	var johncenaImage = $("<img>");
+	johncenaImage.attr("src", imageUrl);
+	johncenaImage.attr("alt", "john cena image");
+	$("#images").prepend(johncenaImage);
+	});
+	});
+
+$("#machoman-button").on("click", function() {
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=macho+man+randy+savage";
+	$.ajax({
+	url: queryURL,
+	method: "GET"
+	})
+	.done(function(response) {
+	var imageUrl = response.data.image_original_url;
+	var machomanImage = $("<img>");
+	machomanImage.attr("src", imageUrl);
+	machomanImage.attr("alt", "macho man image");
+	$("#images").prepend(machomanImage);
+	});
+	});
+
+$("#chrisjericho-button").on("click", function() {
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=chris+jericho+wwe";
+	$.ajax({
+	url: queryURL,
+	method: "GET"
+	})
+	.done(function(response) {
+	var imageUrl = response.data.image_original_url;
+	var chrisjerichoImage = $("<img>");
+	chrisjerichoImage.attr("src", imageUrl);
+	chrisjerichoImage.attr("alt", "chris jericho image");
+	$("#images").prepend(chrisjerichoImage);
+	});
+	});
+
+$("#mickfoley-button").on("click", function() {
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=mick+foley+wwe";
+	$.ajax({
+	url: queryURL,
+	method: "GET"
+	})
+	.done(function(response) {
+	var imageUrl = response.data.image_original_url;
+	var mickfoleyImage = $("<img>");
+	mickfoleyImage.attr("src", imageUrl);
+	mickfoleyImage.attr("alt", "mick foley");
+	$("#images").prepend(mickfoleyImage);
+	});
+	});
+
+
+</script>
+</body>
+
+</html>
