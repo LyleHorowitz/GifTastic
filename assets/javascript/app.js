@@ -1,5 +1,5 @@
 $("#therock-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=the+rock+wwe&rating=pg";
+	var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=the+rock+wwe&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -14,7 +14,7 @@ $("#therock-button").on("click", function() {
 	});
 
 $("#kane-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kane+wwe&rating=pg";
+	var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kane+wwe&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -29,7 +29,7 @@ $("#kane-button").on("click", function() {
 	});
 
 $("#undertaker-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=the+undertaker&rating=pg";
+	var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=the+undertaker&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -45,7 +45,7 @@ $("#undertaker-button").on("click", function() {
 
 
 $("#kurtangle-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kurt+angle&rating=pg";
+	var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kurt+angle&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -60,7 +60,7 @@ $("#kurtangle-button").on("click", function() {
 	});
 
 $("#johncena-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=john+cena+wwe&rating=pg";
+	var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=john+cena+wwe&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -75,7 +75,7 @@ $("#johncena-button").on("click", function() {
 	});
 
 $("#machoman-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=macho+man+randy+savage&rating=pg";
+	var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=macho+man+randy+savage&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -90,7 +90,7 @@ $("#machoman-button").on("click", function() {
 	});
 
 $("#chrisjericho-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=chris+jericho+wwe&rating=pg";
+	var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=chris+jericho+wwe&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -105,7 +105,7 @@ $("#chrisjericho-button").on("click", function() {
 	});
 
 $("#mickfoley-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=mick+foley+wwe&rating=pg";
+	var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=mick+foley+wwe&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
