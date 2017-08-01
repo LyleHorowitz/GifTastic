@@ -3,7 +3,12 @@
 
 <head>
   	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
   	<title>The GifTastic World Of Wrestling</title>
+
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
 <body>
@@ -17,7 +22,11 @@
 		<button id="chrisjericho-button">Chris Jericho</button>
 		<button id="mickfoley-button">Mick Foley</button>
 
+		<input type="text" name="add" placeholder="Add A Button">
 
+
+<br>
+<br>
 <div id="images">
 </div>
 <br>
@@ -26,7 +35,7 @@
 <script type="text/javascript">
 
 $("#therock-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=the+rock+wwe";
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=the+rock+wwe&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -41,7 +50,7 @@ $("#therock-button").on("click", function() {
 	});
 
 $("#kane-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kane+wwe";
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kane+wwe&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -56,7 +65,7 @@ $("#kane-button").on("click", function() {
 	});
 
 $("#undertaker-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=the+undertaker";
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=the+undertaker&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -72,7 +81,7 @@ $("#undertaker-button").on("click", function() {
 
 
 $("#kurtangle-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kurt+angle";
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kurt+angle&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -87,7 +96,7 @@ $("#kurtangle-button").on("click", function() {
 	});
 
 $("#johncena-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=john+cena+wwe";
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=john+cena+wwe&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -102,7 +111,7 @@ $("#johncena-button").on("click", function() {
 	});
 
 $("#machoman-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=macho+man+randy+savage";
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=macho+man+randy+savage&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -117,7 +126,7 @@ $("#machoman-button").on("click", function() {
 	});
 
 $("#chrisjericho-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=chris+jericho+wwe";
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=chris+jericho+wwe&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -132,7 +141,7 @@ $("#chrisjericho-button").on("click", function() {
 	});
 
 $("#mickfoley-button").on("click", function() {
-	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=mick+foley+wwe";
+	var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=mick+foley+wwe&rating=pg";
 	$.ajax({
 	url: queryURL,
 	method: "GET"
@@ -145,6 +154,22 @@ $("#mickfoley-button").on("click", function() {
 	$("#images").prepend(mickfoleyImage);
 	});
 	});
+
+$(".gif").on("click", function() {
+    var state = $(this).attr("data-state");
+        if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+      } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      }
+    });
+
+// Pseudo-coding my final steps:
+// 01. I need to give my "add a button" bar some functionality.
+// 02. Despite querying ratings in my API request, I can't seem to get the image ratings to actually display.
+// 03. Gifs are not pausing on click despite on click function above. When I try to add that on click function into the individual buttons themselves nothing shows up at all.
 
 
 </script>
